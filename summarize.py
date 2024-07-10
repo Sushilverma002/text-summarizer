@@ -1,7 +1,7 @@
 import click;
 from transformers import pipeline;
 
-summarizer = pipeline("summarization")
+summarizer = pipeline("summarization",model="sshleifer/distilbart-cnn-12-6")
 
 @click.command()
 @click.option("--text","-t", required=False, help="Please write your input text to summarize")
